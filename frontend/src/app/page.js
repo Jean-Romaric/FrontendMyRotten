@@ -274,11 +274,11 @@ export default function Home() {
                 className="h-auto w-full object-cover"
                 alt={film.title}
               />
-              <div className="p-5">
+              <div className="p-5 ">
                 <h2 className="text-2xl text-gray-900">{film.title}</h2>
-                <p className="line-clamp-3">Popularités: {film.popularite}</p>
+                <p className="line-clamp-3 text-black">Popularités: {film.popularite}</p>
                 <a
-                  className="hover:text-blue-700"
+                  className="text-blue-700 "
                   href=""
                   onClick={() => getFilmbyID(film._id)}
                 >
