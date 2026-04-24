@@ -14,7 +14,7 @@ export default function SelectionPage() {
 
   const DeleteMovie = async (id) => {
     try {
-      const { data } = await axios.delete(`http://localhost:5000/movie/${id}`, {
+      const { data } = await axios.delete(`https://myrottentomato.onrender.com/movie/${id}`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ export default function SelectionPage() {
 
   const optionsUser = {
     method: "GET",
-    url: "http://localhost:5000/user/me",
+    url: "https://myrottentomato.onrender.com/user/me",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ export default function SelectionPage() {
       try {
         const { data } = await axios({
           method: "GET",
-          url: `http://localhost:5000/movie/page/${pageActuelle}`,
+          url: `https://myrottentomato.onrender.com/movie/page/${pageActuelle}`,
           headers: {
             accept: "application/json",
             Authorization: `Bearer ${token}`,

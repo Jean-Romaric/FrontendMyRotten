@@ -17,7 +17,7 @@ export default function Connexion() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/user/login", {
+      const response = await axios.post("https://myrottentomato.onrender.com/user/login", {
         email,
         password,
       });

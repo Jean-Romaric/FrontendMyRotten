@@ -12,7 +12,7 @@ export default function StatistiquePage() {
 
   const optionsFilms = {
     method: "GET",
-    url: "http://localhost:5000/movie",
+    url: "https://myrottentomato.onrender.com/movie",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,
@@ -21,7 +21,7 @@ export default function StatistiquePage() {
 
   const optionsUsers = {
     method: "GET",
-    url: "http://localhost:5000/user",
+    url: "https://myrottentomato.onrender.com/user",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,

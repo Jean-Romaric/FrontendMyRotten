@@ -40,7 +40,7 @@ export default function UtilisateursPage() {
 
     const optionsADD = {
       method: "POST",
-      url: `http://localhost:5000/user/register`,
+      url: `https://myrottentomato.onrender.com/user/register`,
       data: {
         ...values,
       },
@@ -75,7 +75,7 @@ export default function UtilisateursPage() {
   const DeleteUser = async (id) => {
     const optionsDelete = {
       method: "DELETE",
-      url: `http://localhost:5000/user/${id}`,
+      url: `https://myrottentomato.onrender.com/user/${id}`,
       headers: {
         accept: "application/json",
         Authorization: `Bearer ${token}`,
@@ -94,7 +94,7 @@ export default function UtilisateursPage() {
 
   const optionsUsers = {
     method: "GET",
-    url: "http://localhost:5000/user/",
+    url: "https://myrottentomato.onrender.com/user/",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,

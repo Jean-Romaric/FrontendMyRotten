@@ -21,7 +21,7 @@ export default function Acceuil() {
 
   const optionsFilms = {
     method: "GET",
-    url: "http://localhost:5000/movie",
+    url: "https://myrottentomato.onrender.com/movie",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,
@@ -30,7 +30,7 @@ export default function Acceuil() {
 
   const optionsUser = {
     method: "GET",
-    url: "http://localhost:5000/user/me",
+    url: "https://myrottentomato.onrender.com/user/me",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,
@@ -39,7 +39,7 @@ export default function Acceuil() {
 
   const optionsComment = {
     method: "GET",
-    url: "http://localhost:5000/comment",
+    url: "https://myrottentomato.onrender.com/comment",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,
@@ -50,7 +50,7 @@ export default function Acceuil() {
     const token = localStorage.getItem("token");
     if (token) {
       const headers = { Authorization: "Bearer " + token };
-      const response = await axios.get("http://localhost:5000/user/me", {
+      const response = await axios.get("https://myrottentomato.onrender.com/user/me", {
         headers,
       });
       setUser_id(response.data._id);
@@ -63,7 +63,7 @@ export default function Acceuil() {
     if (token) {
       const headers = { Authorization: "Bearer " + token };
       const response = await axios.get(
-        "http://localhost:5000/movie/" + params.id,
+        "https://myrottentomato.onrender.com/movie/" + params.id,
         { headers }
       );
       setMovie_id(response.data._id);
@@ -84,7 +84,7 @@ export default function Acceuil() {
     try {
       const headers = { Authorization: "Bearer " + token };
       const response = await axios.post(
-        "http://localhost:5000/comment",
+        "https://myrottentomato.onrender.com/comment",
         commentaire,
         { headers }
       );
@@ -145,7 +145,7 @@ export default function Acceuil() {
     const fetchMovie = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/movie/` + params.id,
+          `https://myrottentomato.onrender.com/movie/` + params.id,
           {
             headers: {
               "Content-Type": "application/json",

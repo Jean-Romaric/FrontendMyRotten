@@ -19,7 +19,7 @@ export default function Inscription() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/user/register",
+        "https://myrottentomato.onrender.com/user/register",
         {
           username,
           email,

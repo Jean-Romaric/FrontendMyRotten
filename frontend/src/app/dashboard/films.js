@@ -31,7 +31,7 @@ export default function FilmsPage() {
 
     try {
       const { data } = await axios.post(
-        `http://localhost:5000/movie`,
+        `https://myrottentomato.onrender.com/movie`,
         MovieInfo,
         {
           headers: {
@@ -68,7 +68,7 @@ export default function FilmsPage() {
 
   const optionsUser = {
     method: "GET",
-    url: "http://localhost:5000/user/me",
+    url: "https://myrottentomato.onrender.com/user/me",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,

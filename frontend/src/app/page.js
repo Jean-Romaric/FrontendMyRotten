@@ -35,7 +35,7 @@ export default function Home() {
 
   const optionsFilms = {
     method: "GET",
-    url: "http://localhost:5000/movie",
+    url: "https://myrottentomato.onrender.com/movie",
     headers: {
       accept: "application/json",
     },
@@ -43,7 +43,7 @@ export default function Home() {
 
   const optionsUser = {
     method: "GET",
-    url: "http://localhost:5000/user/me",
+    url: "https://myrottentomato.onrender.com/user/me",
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ export default function Home() {
       try {
         const { data } = await axios({
           method: "GET",
-          url: `http://localhost:5000/movie`,//ici pble
+          url: `https://myrottentomato.onrender.com/movie`,//ici pble
           headers: {
             accept: "application/json",
             Authorization: `Bearer ${token}`,
@@ -93,7 +93,7 @@ export default function Home() {
     try {
       const { data } = await axios({
         method: "POST",
-        url: `http://localhost:5000/user/${user._id}`,
+        url: `https://myrottentomato.onrender.com/user/${user._id}`,
         data: {
           favori: film,
         },
@@ -115,7 +115,7 @@ export default function Home() {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/user/favori/${user._id}`,
+        `https://myrottentomato.onrender.com/user/favori/${user._id}`,
         {
           favori: favori,
         },

@@ -20,7 +20,7 @@ export default function UpdatePage() {
     console.log("cliqué");
 
     try {
-      const { data } = await axios.delete(`http://localhost:5000/user/${id}`, {
+      const { data } = await axios.delete(`https://myrottentomato.onrender.com/user/${id}`, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ export default function UpdatePage() {
   const get_user = async () => {
     if (token) {
       const headers = { Authorization: "Bearer " + token };
-      const response = await axios.get("http://localhost:5000/user/me", {
+      const response = await axios.get("https://myrottentomato.onrender.com/user/me", {
         headers,
       });
       setUsername(response.data.username);
@@ -71,7 +71,7 @@ export default function UpdatePage() {
       const token = localStorage.getItem("token");
       if (token) {
         const headers = { Authorization: "Bearer " + token };
-        const res = await axios.put(`http://localhost:5000/user/${id}`, form, {
+        const res = await axios.put(`https://myrottentomato.onrender.com/user/${id}`, form, {
           headers,
         });
         console.log("Update successful:", res);

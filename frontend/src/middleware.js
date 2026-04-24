@@ -16,7 +16,7 @@ export  async function middleware(request) {
 
         const optionsUser = {
             method: 'GET',
-            url: 'http://localhost:3000/user/me',
+            url: 'https://myrottentomato.onrender.com/user/me',
             headers: {
               accept: 'application/json',
               Authorization: `Bearer ${token.value}`
