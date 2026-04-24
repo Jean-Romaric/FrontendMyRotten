@@ -17,10 +17,25 @@ export default function Home() {
   const [pageActuelle, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
+
+
+
+  useEffect(() => {
+    const isChrome =
+      /chrome/i.test(navigator.userAgent) &&
+      !/edge|edg/i.test(navigator.userAgent);
+
+    if (isChrome) {
+      alert("Désolé, ouvrez Firefox svp !\nCe site fonctionne mieux sur Firefox.");
+    }
+  }, []);
+
   useEffect(() => {//ici
     const storedToken = localStorage.getItem("token");
     setToken(storedToken);
   }, []);
+
+
 
   const getFilmbyID = (id) => {
     router.push(`/detail/${id}`);
@@ -236,7 +251,7 @@ export default function Home() {
                   strokeWidth={2}
                   absoluteStrokeWidth
                 />
-                <span  className="text-gray-900">Mes favoris</span>
+                <span className="text-gray-900">Mes favoris</span>
               </div>
             </>
           )}

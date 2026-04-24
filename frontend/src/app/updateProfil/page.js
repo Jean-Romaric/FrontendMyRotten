@@ -29,7 +29,7 @@ export default function UpdateProfil() {
 
         try {
             const { data } = await axios.delete(
-                `http://localhost:3000/user/${id}`,
+                `https://myrottentomato.onrender.com/user/user/${id}`,
                 {
                     headers: {
                         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ export default function UpdateProfil() {
     const get_user = async () => {
         if (token) {
             const headers = { Authorization: "Bearer " + token };
-            const response = await axios.get("http://localhost:3000/user/me", { headers });
+            const response = await axios.get("https://myrottentomato.onrender.com/user/user/me", { headers });
 
             setUsername(response.data.username);
             setEmail(response.data.email);
@@ -81,7 +81,7 @@ export default function UpdateProfil() {
         try {
             if (token) {
                 const headers = { Authorization: "Bearer " + token };
-                const res = await axios.put(`http://localhost:3000/user/${id}`, form, { headers });
+                const res = await axios.put(`https://myrottentomato.onrender.com/user/${id}`, form, { headers });
 
                 console.log('Update successful:', res);
 
