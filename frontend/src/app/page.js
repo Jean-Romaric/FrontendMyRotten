@@ -136,7 +136,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="bg-white shadow-lg py-4 sticky top-0 z-50 flex justify-around">
+      <header className="bg-gray-950 text-white shadow-lg py-4 sticky top-0 z-50 flex justify-between px-6 border-b border-gray-800">
         <div className="container mx-auto flex items-center justify-between px-4">
           <a
             href="#"
@@ -155,7 +155,7 @@ export default function Home() {
           {token ? (
             <>
               <a
-                className="px-4 hover:border-b-1 text-gray-900 border-gray-500 border-opacity-0 hover:border-opacity-100 hover:text-blue-800 duration-200 cursor-pointer"
+                className="inline-flex items-center justify-center rounded-xl bg-white  px-3 py-2 text-sm font-semibold text-black shadow-sm transition-all duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                 href=""
                 onClick={() => router.push("/updateProfil")}
               >
